@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-main: lightgreen; /* Default color */
+  --color-bg: black;
+  --color-normal: "#1e1e1e";
+}

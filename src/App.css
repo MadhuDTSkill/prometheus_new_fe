@@ -1,0 +1,280 @@
+/* Body and Text Styling */
+body {
+  @apply text-main text-xs bg-bg;
+}
+
+.zero {
+  letter-spacing: -1px; /* Decreases space between characters */
+}
+
+.hero {
+  letter-spacing: 8px; /* Increases space between characters for emphasis */
+}
+
+.font-loading {
+  font-family: "Flow Circular";
+}
+
+.font-main {
+  font-family: "Tektur";
+}
+
+/* Scrollbar Styling */
+*::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  @apply bg-main;
+}
+
+/* Placeholder Styling */
+input::placeholder,
+textarea::placeholder {
+  @apply text-main opacity-50;
+  font-style: italic;
+}
+
+/* Input Field Styling */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+  @apply outline-none border-none;
+}
+
+/* Number Input Spinner Removal */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Cursor and Strong Element Styling */
+.cp {
+  @apply cursor-pointer;
+}
+
+strong {
+  @apply font-semibold mr-1 text-main !important;
+}
+
+/* Code Block Styling */
+code {
+  padding: 0.2em 0.4em; /* Padding around the text */
+  border-radius: 4px; /* Rounded corners */
+  font-family: "Courier New", Courier, monospace; /* Monospace font */
+  font-size: 1.1rem; /* Slightly larger font */
+}
+
+pre {
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+  background-color: #1e1e1e;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 3em;
+  max-width: 100%;
+  overflow-x: auto;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 2px 2px 5px 2px black;
+}
+
+/* Animation Styles */
+.twinkle {
+  display: inline-block;
+  opacity: 0;
+  animation: twinkle 0.5s forwards;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(144, 238, 144, 0.5);
+    border-color: rgba(144, 238, 144, 0.5);
+    border-width: 2px;
+  }
+  25% {
+    box-shadow: 0 0 15px rgba(144, 238, 144, 1);
+    border-color: rgba(144, 238, 144, 1);
+    border-top-color: rgba(144, 238, 144, 1);
+    border-left-color: rgba(144, 238, 144, 1);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(144, 238, 144, 1);
+    border-color: rgba(144, 238, 144, 1);
+    border-top-color: rgba(144, 238, 144, 1);
+    border-left-color: rgba(144, 238, 144, 1);
+    border-bottom-color: rgba(144, 238, 144, 1);
+  }
+  75% {
+    box-shadow: 0 0 15px rgba(144, 238, 144, 1);
+    border-color: rgba(144, 238, 144, 1);
+    border-top-color: rgba(144, 238, 144, 1);
+    border-left-color: rgba(144, 238, 144, 1);
+    border-bottom-color: rgba(144, 238, 144, 1);
+    border-right-color: rgba(144, 238, 144, 1);
+  }
+}
+
+.spinning-glow-border {
+  border: 2px solid transparent;
+  position: relative;
+  animation: spin-glow 2s infinite linear;
+}
+
+/* Clipping Path Shapes */
+.cc {
+  -webkit-clip-path: polygon(3% 0, 100% 0, 100% 0, 100% 97%, 97% 100%, 0 100%, 0 100%, 0 3%);
+  clip-path: polygon(3% 0, 100% 0, 100% 0, 100% 97%, 97% 100%, 0 100%, 0 100%, 0 3%);
+  @apply bg-main;
+}
+
+.cc .cc-target {
+  width: 99.8%;
+  height: 99.8%;
+  margin: auto;
+  background-color: #1e1e1e;
+  -webkit-clip-path: polygon(3% 0, 100% 0, 100% 0, 100% 97%, 97% 100%, 0 100%, 0 100%, 0 3%);
+  clip-path: polygon(3% 0, 100% 0, 100% 0, 100% 97%, 97% 100%, 0 100%, 0 100%, 0 3%);
+}
+
+.cc .cc-target-2 {
+  width: 99%;
+  height: 100%;
+  margin: auto;
+  background-color: #1e1e1e;
+  -webkit-clip-path: polygon(3% 0, 100% 0, 100% 0, 100% 97%, 97% 100%, 0 100%, 0 100%, 0 3%);
+  clip-path: polygon(3% 0, 100% 0, 100% 0, 100% 97%, 97% 100%, 0 100%, 0 100%, 0 3%);
+}
+
+.parallelogram {
+  -webkit-clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  @apply bg-main;
+}
+
+.parallelogram .parallelogram-target {
+  width: 99.5%;
+  margin: auto;
+  -webkit-clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.cc-2 {
+  -webkit-clip-path: polygon(
+    3% 0,
+    100% 0,
+    100% 35%,
+    100% 80%,
+    98% 92%,
+    97% 100%,
+    0 100%,
+    0% 70%,
+    0 20%,
+    2% 7%
+  );
+  clip-path: polygon(3% 0, 100% 0, 100% 35%, 100% 80%, 98% 92%, 97% 100%, 0 100%, 0% 70%, 0 20%, 2% 7%);
+  @apply bg-main;
+}
+
+.cc-2 .cc-2-target {
+  width: 99.8%;
+  height: 99.8%;
+  margin: auto;
+  @apply bg-normal;
+  -webkit-clip-path: polygon(
+    3% 0,
+    100% 0,
+    100% 35%,
+    100% 80%,
+    98% 92%,
+    97% 100%,
+    0 100%,
+    0% 70%,
+    0 20%,
+    2% 7%
+  );
+  clip-path: polygon(3% 0, 100% 0, 100% 35%, 100% 80%, 98% 92%, 97% 100%, 0 100%, 0% 70%, 0 20%, 2% 7%);
+}
+
+.twinkle {
+  /* display: inline-block; */
+  opacity: 0;
+  animation: twinkle 1.5s forwards infinite; /* Animate to full opacity */
+}
+
+/* Container Styles */
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  animation: pulse-bg 5s ease-in-out infinite;
+  overflow: hidden;
+}
+
+/* Title Styles */
+.intro-title {
+  color: var(--color-main); /* Use main color for text */
+  text-shadow: 0 0 10px var(--color-main, rgba(0, 255, 255, 0.8)),
+    0 0 20px var(--color-main, rgba(0, 255, 255, 0.6));
+  animation: glow 3s ease-in-out infinite, flicker 2s infinite;
+  position: relative;
+}
+
+/* Keyframe Animations */
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px var(--color-main, rgba(0, 255, 255, 0.8)),
+      0 0 20px var(--color-main, rgba(0, 255, 255, 0.6));
+  }
+  50% {
+    text-shadow: 0 0 20px var(--color-main, rgba(0, 255, 255, 1)),
+      0 0 30px var(--color-main, rgba(0, 255, 255, 0.9));
+  }
+}
+
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  24%,
+  55% {
+    opacity: 0.5;
+  }
+}
