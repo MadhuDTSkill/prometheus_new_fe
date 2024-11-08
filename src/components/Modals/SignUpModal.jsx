@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import Modal from './Modal';
 import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import icons for showing/hiding password
-import { setData } from '../../Functions/localStorage';
 import AuthContext from '../../Contexts/AuthContext';
 import APICallContext from '../../Contexts/APICallContext';
+import { getData } from '../../Functions/localStorage';
 
 const SignUpModal = ({ showModal, setShowModal, openSignInModal }) => {
 
@@ -31,8 +31,9 @@ const SignUpModal = ({ showModal, setShowModal, openSignInModal }) => {
         let method = 'post';
         let loadingState = setIsLoading
         const onSuccess = (data) => {
-            setData('accessToken', data.token)
+            getData('accessToken', data.token)
             setIsAuthenticated(true)
+            window.location.reload()
         }
         const onError = (error) => {
             console.log(error)

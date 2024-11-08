@@ -25,9 +25,7 @@ const SignInModal = ({ showModal, setShowModal, openSignUpModal }) => {
         let loadingState = setIsLoading
         const onSuccess = (data) => {
             setData('accessToken', data.token)
-            setTimeout(() => {
-                setIsAuthenticated(true)
-            }, 1000)
+            window.location.reload()
         }
         const onError = (error) => {
         }

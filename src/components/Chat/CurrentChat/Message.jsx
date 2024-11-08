@@ -22,7 +22,7 @@ const Message = ({ message, addNewMessage, isStreaming, isLoading }) => {
             {/* Prompt - align to the right */}
             <div className='self-end w-full flex justify-end relative'>
                 <div className='pb-0.5 border-t border-main min-w-[28%] max-w-[70%]'>
-                    <p className='mt-2 py-2 px-4 text-sm'>{prompt}</p>
+                    <p className='mt-2 py-2 text-right px-4 text-sm'>{prompt}</p>
                 </div>
                 <div ref={titleRef} className='cc-2 absolute text-md right-5 -top-3 font-semibold p-px'>
                     <p className='cc-2-target p-1 px-16'>You</p>

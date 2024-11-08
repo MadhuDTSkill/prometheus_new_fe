@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import LoadingIcon from '../../ui/LoadingIcon';
+import ChatResponseContext from '../../../Contexts/ChatResponseContext';
 
 const LoadingHUD = () => {
-    const [isLoading, setIsLoading] = useState(true);
+
+    const { isLatestMessageLoading } = useContext(ChatResponseContext)
 
 
     return (
         <div className="flex flex-col items-center justify-center flex-1">
             {
-                isLoading && (
+                isLatestMessageLoading && (
                     <>
                         <LoadingIcon className="text-4xl animate-spin" />
                         <p className="text-sm font-semibold p-3">Loading...</p>

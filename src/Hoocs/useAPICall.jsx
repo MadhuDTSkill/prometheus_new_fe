@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import instance from '../Functions/Axios'
 import AuthContext from '../Contexts/AuthContext';
+import { getData } from '../Functions/localStorage';
 
 
 const useAPICall = () => {

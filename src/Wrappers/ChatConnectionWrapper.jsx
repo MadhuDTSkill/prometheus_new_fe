@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
-import { getData } from '../Functions/localStorage'
 import ChatWindowsContext from '../Contexts/ChatWindowsContext';
 import ChatResponseContext from '../Contexts/ChatResponseContext';
+import { getData } from '../Functions/localStorage';
 
 const token = getData('accessToken')
 
